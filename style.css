@@ -19,5 +19,10 @@
 
 /* Background image for whole site */
 body {
-    background-image: url(background.png);
+    background-image: url(assets/background.png);
+    position: relative;
+}
+
+section {
+    background-image: url(assets/jumbotron.jpeg);
 }
