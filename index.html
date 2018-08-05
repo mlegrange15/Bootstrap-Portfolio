@@ -17,7 +17,7 @@
 </head>
 <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" id="nav">
-        <a class="navbar-brand mr-5 ml-5" href="#">Michael LeGrange</a>
+        <a class="nav-link navbar-brand mr-5 ml-5" href="#top" data-id="top">Michael LeGrange</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
             aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -25,16 +25,16 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#about">About</a>
+                    <a class="nav-link" href="#about" data-id="about">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#portfolio">Portfolio</a>
+                    <a class="nav-link" href="#portfolio" data-id="portfolio">Portfolio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#skills">Skills</a>
+                    <a class="nav-link" href="#skills" data-id="skills">Skills</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
+                    <a class="nav-link" href="#contact" data-id="contact">Contact</a>
                 </li>
             </ul>
         </div>
@@ -47,7 +47,7 @@
 
     <!-- Jumbotron Section -->
 
-    <section class="jumbotron text-center shadow-lg mt-4">
+    <section class="jumbotron text-center shadow-lg mt-4" id="top">
         <div class="container">
             <h1 class="jumbotron-heading">Hello, welcome to my portfolio.</h1>
             <p class="lead text-muted">Something short and leading about the portfolio.</p>
@@ -104,7 +104,7 @@
                     <div class="card-body text-center">
                         <p class="card-text">Trip Planner:</p>
                         <div class="d-flex justify-content-between align-items-center">
-                            <a href="https://mlegrange15.github.io/travelApp/">
+                            <a href="https://mlegrange15.github.io/travelApp/" target="_blank">
                                 <button type="button" class="btn btn btn-outline-secondary">View</button>
                             </a>
                         </div>
@@ -119,8 +119,8 @@
                     <div class="card-body text-center">
                         <p class="card-text">Liri App:</p>
                         <div class="d-flex justify-content-between align-items-center">
-                            <a href="https://github.com/mlegrange15/liri-node-app">
-                                <button type="button" class="btn btn btn-outline-secondary">View</button>
+                            <a href="https://github.com/mlegrange15/liri-node-app" target="_blank">
+                                <button type="button" class="btn btn btn-outline-secondary" >View</button>
                             </a>
                         </div>
                     </div>
@@ -134,7 +134,7 @@
                     <div class="card-body text-center">
                         <p class="card-text">Train Scheduler:</p>
                         <div class="d-flex justify-content-between align-items-center">
-                            <a href="https://mlegrange15.github.io/trainSchedule/">
+                            <a href="https://mlegrange15.github.io/trainSchedule/" target="_blank">
                                 <button type="button" class="btn btn btn-outline-secondary">View</button>
                             </a>
                         </div>
@@ -151,18 +151,13 @@
                     <div class="card-body">
                         <p class="card-text text-center">Psychic Game:</p>
                         <div class="d-flex justify-content-between align-items-center">
-
-                            <a href="https://mlegrange15.github.io/Psychic-Game/">
+                            <a href="https://mlegrange15.github.io/Psychic-Game/" target="_blank">
                                 <button type="button" class="btn btn btn-outline-secondary">View</button>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
-
-
-
-
             <div class="col-md-4">
                 <div class="card mb-4 box-shadow shadow-lg bg-white">
                     <img class="img-responsive card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
@@ -171,7 +166,7 @@
                         <p class="card-text">Trivia Game:</p>
                         <div class="d-flex justify-content-between align-items-center">
 
-                            <a href="https://mlegrange15.github.io/TriviaGame/">
+                            <a href="https://mlegrange15.github.io/TriviaGame/" target="_blank">
                                 <button type="button" class="btn btn btn-outline-secondary">View</button>
                             </a>
                         </div>
@@ -185,15 +180,13 @@
                     <div class="card-body">
                         <p class="card-text text-center">Giphy API:</p>
                         <div class="d-flex justify-content-between align-items-center">
-                            <a href="https://mlegrange15.github.io/giphyAPI/">
+                            <a href="https://mlegrange15.github.io/giphyAPI/" target="_blank">
                                 <button type="button" class="btn btn btn-outline-secondary">View</button>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
-
-
         </div>
 
         <br>
@@ -289,14 +282,36 @@
         <div class="text-white text-center bg-secondary p-2">Footer</div>
     </footer>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+    <!-- Jquery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
         crossorigin="anonymous"></script>
+
+
+        <script type="text/javascript">
+    $(document).ready(function () {
+        // navigation click actions 
+        $('.nav-link').on('click', function (event) {
+            event.preventDefault();
+            var sectionID = $(this).attr("data-id");
+            console.log($(this).attr("data-id"));
+            
+            scrollToID('#' + sectionID, 750);
+        });
+    });
+
+    // scroll function
+function scrollToID(id, speed){
+var offSet = 70;
+var targetOffset = $(id).offset().top - offSet;
+$('html,body').animate({scrollTop:targetOffset}, speed);
+}
+</script>
+
+
 </body>
 
 </html>
