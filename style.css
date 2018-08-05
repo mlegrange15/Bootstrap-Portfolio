@@ -1,3 +1,7 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+}
+
 /* portfolio images */
 #portfolioImage {
     height: 150px;
@@ -25,4 +29,17 @@ body {
 
 section {
     background-image: url(assets/jumbotron.jpeg);
+    height: 400px;
+}
+
+footer {
+
+    background-color: rgb(51,58,64);
+    color: #ffffff
+}
+
+nav {
+
+    background-color: rgb(51,58,64);
+    color: #ffffff
 }

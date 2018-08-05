@@ -6,17 +6,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <!-- My CSS -->
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
         crossorigin="anonymous">
 
-    <!-- My CSS -->
-    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 
     <title>Michael LeGrange</title>
 </head>
 <header>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" id="nav">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="nav">
         <a class="nav-link navbar-brand mr-5 ml-5" href="#top" data-id="top">Michael LeGrange</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
             aria-expanded="false" aria-label="Toggle navigation">
@@ -24,7 +26,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="#about" data-id="about">About</a>
                 </li>
                 <li class="nav-item">
@@ -43,17 +45,25 @@
 
 <body data-spy="scroll" data-target="#nav" data-offset="0">
 
-
-
     <!-- Jumbotron Section -->
 
     <section class="jumbotron text-center shadow-lg mt-4" id="top">
         <div class="container">
-            <h1 class="jumbotron-heading">Hello, welcome to my portfolio.</h1>
-            <p class="lead text-muted">Something short and leading about the portfolio.</p>
-            <p>
-                <a href="#" class="btn btn-secondary my-2">Change</a>
-            </p>
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Hello, welcome to my portfolio.</h1>
+                    <h3>Something short and leading about the portfolio.</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p> Let's start by getting on the same page. How are you feeling today?</p>
+                    <a href="#" class="btn btn-secondary my-2" id="relaxed-button">Relaxed</a>
+                    <a href="#" class="btn btn-secondary my-2" id="energetic-button">Energetic</a>
+                    <a href="#" class="btn btn-secondary my-2" id="tired-button">Tired</a>
+                    <a href="#" class="btn btn-secondary my-2" id="irritated-button">Irritated</a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -62,10 +72,14 @@
 
     <div class="container">
         <!-- About me Section -->
+        <div class="row mb-3" id="about">
+                <div class="col-md-12">
+                    <h2>About:</h2>
+                </div>
+            </div>
         <div class="row text-center shadow-lg bg-white mb-4 p-4" id="about">
             <div class="col-lg-12">
                 <img class="rounded-circle mb-3" src="assets/portfolioPicture2.png" alt="profile-picture" width="240" height="240">
-                <h2 class="mb-3">About Me</h2>
                 <p>Hi! As you can tell by now my name is Michael LeGrange and I am excited to share a little about myself. I
                     was born and raised in Baton Rouge. LA and lived there for about the first 21 years of my life. Growing
                     up I loved sports but mostly played baseball. My love for baseball lead me to Nicholls State University
@@ -79,7 +93,7 @@
                     to finally be taking this long overdue step into development. Hope you like my sweet site!
                 </p>
                 <p class="mt-4">
-                    <a class="btn btn-secondary" href="https://github.com/mlegrange15" role="button">My GitHub</a>
+                    <a class="btn btn-secondary" href="https://github.com/mlegrange15" target="_blank" role="button">My GitHub</a>
                 </p>
             </div>
         </div>
@@ -120,7 +134,7 @@
                         <p class="card-text">Liri App:</p>
                         <div class="d-flex justify-content-between align-items-center">
                             <a href="https://github.com/mlegrange15/liri-node-app" target="_blank">
-                                <button type="button" class="btn btn btn-outline-secondary" >View</button>
+                                <button type="button" class="btn btn btn-outline-secondary">View</button>
                             </a>
                         </div>
                     </div>
@@ -279,11 +293,11 @@
 
     <!-- Sticky Footer -->
     <footer>
-        <div class="text-white text-center bg-secondary p-2">Footer</div>
+        <div class="text-white text-center  p-2">Footer</div>
     </footer>
 
     <!-- Jquery -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
@@ -291,25 +305,71 @@
         crossorigin="anonymous"></script>
 
 
-        <script type="text/javascript">
-    $(document).ready(function () {
-        // navigation click actions 
-        $('.nav-link').on('click', function (event) {
-            event.preventDefault();
-            var sectionID = $(this).attr("data-id");
-            console.log($(this).attr("data-id"));
-            
-            scrollToID('#' + sectionID, 750);
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // navigation click actions 
+            $('.nav-link').on('click', function (event) {
+                event.preventDefault();
+                var sectionID = $(this).attr("data-id");
+                scrollToID('#' + sectionID, 750);
+            });
         });
-    });
 
-    // scroll function
-function scrollToID(id, speed){
-var offSet = 70;
-var targetOffset = $(id).offset().top - offSet;
-$('html,body').animate({scrollTop:targetOffset}, speed);
-}
-</script>
+        // scroll function
+        function scrollToID(id, speed) {
+            var offSet = 70;
+            var targetOffset = $(id).offset().top - offSet;
+            $('html,body').animate({ scrollTop: targetOffset }, speed);
+        }
+
+        $("#relaxed-button").click(function () {
+            $("body").css("color", "rgb(173,178,251)");
+            $(".btn").css("color", "white");
+            $(".btn").css("background-color", "rgb(173,178,251)");
+            $("nav, footer").css("background-color", "rgb(173,178,251)");
+            $(".nav-link").css("color", "white");
+            $("section").css("background-image", "url(assets/relax.jpg)");
+            $("section").css("background-size", "cover");
+            $("section").css("color", "white");
+            $("#energetic-button, #tired-button, #irritated-button").css("background-color", "lightgray");
+        });
+
+        $("#energetic-button").click(function () {
+            $("body").css("color", "rgb(255,195,0)");
+            $(".btn").css("color", "white");
+            $(".btn").css("background-color", "rgb(255,195,0)");
+            $("nav, footer").css("background-color", "rgb(254,224,0)");
+            $(".nav-link").css("color", "white");
+            $("section").css("background-image", "url(assets/energy.jpeg)");
+            $("section").css("background-size", "cover");
+            $("section").css("color", "white");
+            $("#relaxed-button, #tired-button, #irritated-button").css("background-color", "lightgray");
+        });
+
+        $("#tired-button").click(function () {
+            $("body").css("color", "rgb(21,39,74)");
+            $(".btn").css("color", "white");
+            $(".btn").css("background-color", "rgb(21,39,74)");
+            $("nav, footer").css("background-color", "rgb(21,39,74)");
+            $(".nav-link").css("color", "white");
+            $("section").css("background-image", "url(assets/midnight.jpg)");
+            $("section").css("background-size", "cover");
+            $("section").css("color", "white");
+            $("#relaxed-button, #energetic-button, #irritated-button").css("background-color", "lightgray");
+        });
+
+        $("#irritated-button").click(function () {
+            $("body").css("color", "rgb(240, 97, 81)");
+            $(".btn").css("color", "white");
+            $(".btn").css("background-color", "rgb(240, 97, 81)");
+            $("nav, footer").css("background-color", "rgb(240, 97, 81)");
+            $(".nav-link").css("color", "white");
+            $("section").css("background-image", "url(assets/mad.jpg)");
+            $("section").css("background-size", "cover");
+            $("section").css("color", "white");
+            $("#relaxed-button, #energetic-button, #tired-button").css("background-color", "lightgray");
+        });
+    </script>
 
 
 </body>
