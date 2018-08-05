@@ -39,6 +39,7 @@
                     <a class="nav-link" href="#contact" data-id="contact">Contact</a>
                 </li>
             </ul>
+            <a input type="button" value="Refresh Page" onClick="window.location.reload()" href="#" class="btn-sm text-dark my-2" id="">Back To Default</a>
         </div>
     </nav>
 </header>
@@ -317,7 +318,7 @@
 
         // scroll function
         function scrollToID(id, speed) {
-            var offSet = 70;
+            var offSet = 80;
             var targetOffset = $(id).offset().top - offSet;
             $('html,body').animate({ scrollTop: targetOffset }, speed);
         }
