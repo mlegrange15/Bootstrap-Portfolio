@@ -38,7 +38,7 @@
                     <a class="nav-link" href="#contact" data-id="contact">Contact</a>
                 </li>
             </ul>
-            <a input type="button" value="Refresh Page" onClick="window.location.reload()" href="#" class="btn-sm text-dark my-2" id="">Back To Default</a>
+            <!-- <a input type="button" value="Refresh Page" onClick="window.location.reload()" href="#" class="btn-sm text-dark my-2" id="">Back To Default</a> -->
         </div>
     </nav>
 </header>
@@ -57,11 +57,11 @@
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <p> Let's start by getting on the same page. How are you feeling today?</p>
-                    <a href="#" class="btn btn-secondary my-2" id="relaxed-button">Relaxed</a>
-                    <a href="#" class="btn btn-secondary my-2" id="energetic-button">Energetic</a>
-                    <a href="#" class="btn btn-secondary my-2" id="tired-button">Tired</a>
-                    <a href="#" class="btn btn-secondary my-2" id="irritated-button">Irritated</a>
+                    <p class="mt-4">
+                        <a class="btn btn-secondary" href="https://github.com/mlegrange15" target="_blank" role="button">GitHub</a>
+                        <a class="btn btn-secondary" href="https://www.linkedin.com/in/michaellegrange/" target="_blank" role="button">Linkedin</a>
+                        <a class="btn btn-secondary" href="#" target="_blank" role="button">Resume</a>
+                    </p>
                 </div>
             </div>
         </div>
@@ -73,9 +73,6 @@
     <div class="container">
         <!-- About me Section -->
         <div class="row mb-3" id="about">
-            <div class="col-md-12">
-                <h2>About:</h2>
-            </div>
         </div>
         <div class="row text-center shadow-lg bg-white mb-4 p-4" id="about">
             <div class="col-lg-12">
@@ -91,9 +88,6 @@
                     like really wanted to move back to the Midwest. I've now been in Chicago for over 3 years and getting
                     used to it. The summers are great of course but I'm struggling with winter still. Last, I'm super pumped
                     to finally be taking this long overdue step into development. Hope you like my sweet site!
-                </p>
-                <p class="mt-4">
-                    <a class="btn btn-secondary" href="https://github.com/mlegrange15" target="_blank" role="button">My GitHub</a>
                 </p>
             </div>
         </div>
@@ -360,58 +354,6 @@
             var targetOffset = $(id).offset().top - offSet;
             $('html,body').animate({ scrollTop: targetOffset }, speed);
         }
-
-        $("#relaxed-button").click(function () {
-            $("body").css("color", "rgb(173,178,251)");
-            $(".btn").css("color", "white");
-            $(".btn").css("background-color", "rgb(173,178,251)");
-            $("nav, footer").css("background-color", "rgb(173,178,251)");
-            $(".nav-link").css("color", "white");
-            $("section").css("background-image", "url(assets/relax.jpg)");
-            $("section").css("background-size", "cover");
-            $("section").css("color", "white");
-            $("#energetic-button, #tired-button, #irritated-button").css("background-color", "lightgray");
-            $("body").css("font-family", "'Quicksand', sans-serif");
-        });
-
-        $("#energetic-button").click(function () {
-            $("body").css("color", "rgb(255,195,0)");
-            $(".btn").css("color", "white");
-            $(".btn").css("background-color", "rgb(255,195,0)");
-            $("nav, footer").css("background-color", "rgb(254,224,0)");
-            $(".nav-link").css("color", "white");
-            $("section").css("background-image", "url(assets/energy.jpeg)");
-            $("section").css("background-size", "cover");
-            $("section").css("color", "white");
-            $("#relaxed-button, #tired-button, #irritated-button").css("background-color", "lightgray");
-            $("body").css("font-family", "'Audiowide', cursive");
-        });
-
-        $("#tired-button").click(function () {
-            $("body").css("color", "rgb(21,39,74)");
-            $(".btn").css("color", "white");
-            $(".btn").css("background-color", "rgb(21,39,74)");
-            $("nav, footer").css("background-color", "rgb(21,39,74)");
-            $(".nav-link").css("color", "white");
-            $("section").css("background-image", "url(assets/midnight.jpg)");
-            $("section").css("background-size", "cover");
-            $("section").css("color", "white");
-            $("#relaxed-button, #energetic-button, #irritated-button").css("background-color", "lightgray");
-            $("body").css("font-family", "'Indie Flower', cursive");
-        });
-
-        $("#irritated-button").click(function () {
-            $("body").css("color", "rgb(240, 97, 81)");
-            $(".btn").css("color", "white");
-            $(".btn").css("background-color", "rgb(240, 97, 81)");
-            $("nav, footer").css("background-color", "rgb(240, 97, 81)");
-            $(".nav-link").css("color", "white");
-            $("section").css("background-image", "url(assets/mad.jpg)");
-            $("section").css("background-size", "cover");
-            $("section").css("color", "white");
-            $("#relaxed-button, #energetic-button, #tired-button").css("background-color", "lightgray");
-            $("body").css("font-family", "'Michroma', sans-serif");
-        });
     </script>
 
 
