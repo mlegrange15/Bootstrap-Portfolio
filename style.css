@@ -35,15 +35,19 @@ section {
 footer {
 
     background-color: rgb(51,58,64);
-    color: #ffffff
+    color: #ffffff;
 }
 
 nav {
 
     background-color: rgb(51,58,64);
-    color: #ffffff
+    color: #ffffff;
 }
 
 .nav-link {
-    color: #ffffff
+    color: #ffffff;
+}
+
+.fa-github {
+    color: black;
 }
