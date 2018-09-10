@@ -2,6 +2,10 @@ body {
     font-family: 'Quicksand', sans-serif;
 }
 
+.jumbotron {
+    height: 250px;
+}
+
 /* portfolio images */
 #portfolioImage {
     height: 150px;
